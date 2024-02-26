@@ -1,7 +1,7 @@
 import { useState, Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
-import Island from '../models/island'
+import MountainIsland from '../models/MountainIsland'
 import Sky from '../models/Sky'
 import HomeInfo from '../components/HomeInfo'
 import Plane from '../models/Plane'
@@ -14,12 +14,12 @@ const Home = () => {
 
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
-    let rotation = [0.1, 4.7, 0];
+    let rotation = [0.15, 9.8, 0];
     let screenPosition = [0, -6.5, -43];
     if(window.innerWidth < 768){
-      screenScale = [0.9, 0.9, 0.9];
+      screenScale = [4, 4, 4];
     } else {
-      screenScale = [1, 1 , 1];
+      screenScale = [3, 3 , 3];
     }
     return [screenScale, screenPosition, rotation];
   }
@@ -54,7 +54,7 @@ const Home = () => {
                 <ambientLight intensity={0.5}/>
                 <hemisphereLight skyColor="b1e1ff" groundColor="#000000" intensity={1}/>
                 <Sky isRotating={isRotating}/>
-                <Island 
+                <MountainIsland 
                   position = { islandPosition }
                   scale = { islandScale }
                   rotation = { rotation }
