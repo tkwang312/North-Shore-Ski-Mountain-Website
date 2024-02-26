@@ -14,7 +14,7 @@ import { a } from '@react-spring/three'
 
 import islandScene from '../assets/3d/island.glb';
 
-const Island = ({isRotating, setIsRotating, ...props}) => {
+const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
   const islandRef = useRef();
   const { gl, viewport } = useThree();
   const { nodes, materials } = useGLTF(islandScene);
@@ -119,7 +119,7 @@ const Island = ({isRotating, setIsRotating, ...props}) => {
           setCurrentStage(3);
           break; 
         case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
-          setCurrentStage(3);
+          setCurrentStage(2);
           break; 
         case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
           setCurrentStage(1);
