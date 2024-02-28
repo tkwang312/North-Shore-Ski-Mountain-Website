@@ -28,7 +28,6 @@ const MountainIsland = ({isRotating, setIsRotating, setCurrentStage, ...props}) 
 
   //mouse release
   const handlePointerUp = (e) => {
-    e.stopPropagation();
     e.preventDefault();
     setIsRotating(false);
   }
@@ -52,10 +51,10 @@ const MountainIsland = ({isRotating, setIsRotating, setCurrentStage, ...props}) 
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowLeft'){
       if(!isRotating) setIsRotating(true);
-      islandRef.current.rotation.y += 0.01 * Math.PI;
+      islandRef.current.rotation.y += 0.05 * Math.PI;
     } else if (e.key === 'ArrowRight'){
       if(!isRotating) setIsRotating(true);
-      islandRef.current.rotation.y -= 0.01 * Math.PI;
+      islandRef.current.rotation.y -= 0.05 * Math.PI;
     }
   }
 

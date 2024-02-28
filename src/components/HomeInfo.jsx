@@ -22,17 +22,17 @@ const renderContent = {
   ),
   2: (
     <InfoBox text="Cypress Mountain: In West Vancouver"
-    link="/about"
+    link="/cypress"
     btnText="Learn More" />
   ),
   3: (
     <InfoBox text="Grouse Mountain: In North Vancouver"
-    link="/about"
+    link="/grouse"
     btnText="Learn More" />
   ),
   4: (
     <InfoBox text="Seymour Mountain: In Lynn Valley"
-    link="/contact"
+    link="/seymour"
     btnText="Learn More" />
   )
 }

@@ -1,6 +1,8 @@
 import Home from './Home';
 import About from './About';
-import Projects from './Projects';
+import Grouse from './Grouse';
 import Contact from './Contact';
+import Cypress from './Cypress';
+import Seymour from './Seymour';
 
-export { Home, About, Projects, Contact };
+export { Home, About, Grouse, Contact, Cypress, Seymour };
